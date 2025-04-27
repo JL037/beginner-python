@@ -472,3 +472,74 @@ for i in range(10, -1, -1):
             print(j, "=", end=" ")
         factorial *= j
     print(factorial)
+
+def greet():
+    print("hello")
+    print("Welcome, Jared")
+
+greet()
+
+def greet(name):
+    print("hello")
+    print("Welcome, " + name)
+greet("Sabrina")
+
+new_guy = "Carl"
+greet(new_guy)
+
+def greet(name):
+    if name == "Claire":
+        return
+    print(f"Welcome {name}")
+
+greet("Claire")
+greet("Clarice")
+
+def greet(name):
+    return f"Hello {name}! Welcome to my app."
+returned = greet("Sal")
+print(returned)
+
+def greet(name="user"):
+    return f"Hello {name}! Welcome to my app."
+print(greet())
+
+def greet(name="user", be_nice=False):
+    if be_nice:
+        return f"Hello {name}! Welcome to my app."
+    return f"Go away {name}"
+print(greet("Jared", True))
+print(greet("Caleb",))
+
+print(greet(be_nice=True))
+print(greet(be_nice=True, name="Jared"))
+print(greet(name="Caleb", be_nice=True))
+
+def example(pos1, pos2, pos3, /, either1, either2, *, keyword1, keyword2, keyword3):
+    print("pos1", pos1)
+    print("pos2", pos2)
+    print("pos3", pos3)
+    print("either1", either1)
+    print("either2", either2)
+    print("keyword1", keyword1)
+    print("keyword2", keyword2)
+    print("keyword3", keyword3)
+
+example(1, 2, 3, 4, either2=5, keyword3=6, keyword1=7, keyword2=8)
+
+def greet_all(people):
+    for person in people:
+        print(f"Hello {person}")
+
+people = ["Jared", "Caleb", "Josh"]
+greet_all(people)
+
+def greet_all(*people):
+    for person in people:
+        print("Hello" + person)
+greet_all("Jared", "Caleb", "Josh")
+
+def print_info(name, age, email):
+    print(f"{name} is {str(age)}. Contact at {email}.")
+info = ["Jared", 3, "email@email.com"]
+print_info(*info)
