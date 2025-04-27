@@ -268,3 +268,207 @@ on_sale = False
 
 if car_nice and on_sale:
     print("Buy the car!")
+
+languages = ["Go", "Zig", "Rust"]
+
+for language in languages:
+    print(language, end=" ")
+print()
+
+
+print(list(range(25)))
+
+for i in range(15):
+    print(i, end=" ")
+print()
+
+for i in range(100, -1, -10):
+    print(i, end=" ")
+print()
+
+languages = ["Go", "Zig", "Rust"]
+for i in range(len(languages)):
+    print(i, languages[i])
+
+numbers = [1, 2, 3, 4]
+for i in range(len(numbers)):
+    numbers[i] *= 2
+print(numbers)
+
+languages = ["Python", "C++", "Java", "Java", "Perl", "Python", "C++", "C#", "Python"]
+search = "Python"
+search2 = "C++"
+count = 0
+print(f"Searching for {search}")
+print(f"Searching for {search2}")
+
+for language in languages:
+    if language == search or language == search2:
+        count += 1
+        print(f"✅ {language}")
+        continue
+    print(f"❌ {language}")
+print(f"We found {search, search2} {count} times.")
+
+if language == search:
+    count += 1
+    print(f"✅ {language}")
+else:
+    print(f"❌ {language}")
+
+for x in range(10):
+    pass
+
+languages = ["Python", "C++", "Java", "Java", "Perl", "Python", "C++", "C#", "Python"]
+search = "Rust"
+print(f"Searching for {search}")
+
+for language in languages:
+    if language == search:
+        print(f"Found {search}")
+        break
+else:
+    print(f"We couldn't find {search}")
+
+
+i = 0
+while(i < 10):
+    print(i, end="")
+    i += 1
+print()
+
+i = 40
+while(i >= 0):
+    print(i, end="")
+    i -= 2
+print()
+
+initialization = 5
+stop_at = 63
+increment = 1
+
+for i in range(initialization, stop_at, increment):
+    print("for loop:", i)
+
+while(initialization < stop_at):
+    print("while loop:", initialization)
+    initialization += increment
+
+i = 0
+while(i < 20):
+    if i ** 2 > 50:
+        print("Square big enough:", i)
+        break
+    i += 1
+else:
+    print("None are big enough")
+
+index = -1 
+i = 0
+while(i < 10):
+    if i ** 2 > 50:
+        index = i
+        break
+    i += 1
+
+if index > -1:
+    print(f"First square big enough is {i}")
+else:
+    print("None are big enough")    
+
+i = 15
+print(i)
+i += 1
+while (i < 10):
+    print(i)
+    i += 1
+
+# print("Do you want to continue? Y/N: ")
+# response = input()
+# while response == "Y" or response == "y":
+#     print("Do you want to continue Y/N: ")
+#     response = input()
+
+# print("Do you want to continue? Y/N: ")
+# response = input()
+# while response.lower() == "y":
+#     print("Do you want to continue? Y/N: ")
+#     response = input()
+
+
+name = "Jared"
+if name.isupper():
+    print("Upper")
+elif name.islower():
+    print("Lower")
+else:
+    print("Mixed")
+
+age = 30 
+fun = False
+likes_to_dance = True
+
+if (age < 30 or fun) and likes_to_dance:
+    print("You're invited")
+else:
+    print("get lost")
+
+if age < 30 or fun:
+    if likes_to_dance:
+        print("You're invited")
+    else:
+        print("How do you not like to dance")
+else:
+    print("You're either to old or not fun enough")
+
+for i in range(10):
+    for j in range(10):
+        print(j, end=" ")
+    print()
+
+for i in range(10):
+    for j in range(10):
+        print(j * i, end="\t")
+    print()
+
+for i in range(10):
+    for j in range(i, 10):
+        print(j, end=" ")
+    print()
+
+arr = [1, 2, 3]
+
+for i in range(len(arr)):
+    for j in range(i, len(arr)):
+        print(arr[i:j+1])
+
+print("All the factorials with output:")
+i = 10
+print("Getting factorials up to ", i)
+while i > -1:
+    factorial = 1
+    j = i
+    while j > 0:
+        if j > 1:
+            print(j, "x", end=" ")
+        else:
+            print(j, "=", end=" ")
+        factorial *= j
+        j -= 1
+    print(factorial)
+    i -= 1
+
+# easier to read
+print("All the factorials with output:")
+i = 10 
+print("Getting factorials up to", i)
+
+for i in range(10, -1, -1):
+    factorial = 1
+    for j in range(i, 0 , -1):
+        if j > 1:
+            print(j, "x", end=" ")
+        else:
+            print(j, "=", end=" ")
+        factorial *= j
+    print(factorial)
