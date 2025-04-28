@@ -333,28 +333,33 @@
 #     result = solution.twoSum_pair(nums, target)
 #     print(result)
 
+# from typing import List
+# class Solution:
+#     def twoSumhash(self, nums: List[int], target: int) -> List[int]:
+#         nums.sort()
+#         lo, hi = 0, len(nums) - 1
+
+#         while lo < hi:
+#             curr_sum = nums[lo] + nums[hi]
+#             if curr_sum == target:
+#                 return [nums[lo], nums[hi]]
+#             elif curr_sum < target:
+#                 lo += 1
+#             else:
+#                 hi -= 1
+
+#         return []
+
+# if __name__ == "__main__":
+#     solution = Solution()
+#     nums = [10, 2, 3, 7, 5]
+#     target = 12
+#     result = solution.twoSumhash(nums, target)
+#     print(result)
+
 from typing import List
 class Solution:
-    def twoSumhash(self, nums: List[int], target: int) -> List[int]:
-        nums.sort()
-        lo, hi = 0, len(nums) - 1
-
-        while lo < hi:
-            curr_sum = nums[lo] + nums[hi]
-            if curr_sum == target:
-                return [nums[lo], nums[hi]]
-            elif curr_sum < target:
-                lo += 1
-            else:
-                hi -= 1
-
-        return []
-
-if __name__ == "__main__":
-    solution = Solution()
-    nums = [10, 2, 3, 7, 5]
-    target = 12
-    result = solution.twoSumhash(nums, target)
-    print(result)
-
-
+    def twosumSorted(self, nums: List[int], target: int):
+        complements = {}
+        
+        if 
