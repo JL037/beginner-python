@@ -147,40 +147,214 @@
 
 # print(backpack)
 
-work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
-work_days.sort()
+# work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
+# work_days.sort()
 
-print(work_days)
+# print(work_days)
 
-numbers = [1, 11, 115, 13, 1305, 43]
-numbers.sort()
-print(numbers)
+# numbers = [1, 11, 115, 13, 1305, 43]
+# numbers.sort()
+# print(numbers)
 
-numbers = [1, 11, 115, 13, 1305, 43]
-numbers_sorted = sorted(numbers)
-print(numbers_sorted)
+# numbers = [1, 11, 115, 13, 1305, 43]
+# numbers_sorted = sorted(numbers)
+# print(numbers_sorted)
 
-numbers = sorted([1, 11, 115, 13, 1305, 43])
-print(numbers)
+# numbers = sorted([1, 11, 115, 13, 1305, 43])
+# print(numbers)
 
-numbers = sorted([1, 11, 115, 13, 1305, 43])
-numbers.reverse()
-print(numbers)
+# numbers = sorted([1, 11, 115, 13, 1305, 43])
+# numbers.reverse()
+# print(numbers)
 
 
-numbers = [1, 11, 115, 13, 1305, 43]
-print(sorted(numbers, reverse=True))
+# numbers = [1, 11, 115, 13, 1305, 43]
+# print(sorted(numbers, reverse=True))
 
-letters = ['a', 'A', 'abc', 'ABC', 'aBc', 'aBC', 'Abc']
+# letters = ['a', 'A', 'abc', 'ABC', 'aBc', 'aBC', 'Abc']
 
-print(sorted(letters)) #Capital is considered first
-print(sorted(letters, key=str.lower))
+# print(sorted(letters)) #Capital is considered first
+# print(sorted(letters, key=str.lower))
 
-random = ["a", "A", "aa", "AAA", "HELLO", "b", "c", "a"]
-print(sorted(random, key=len))
+# random = ["a", "A", "aa", "AAA", "HELLO", "b", "c", "a"]
+# print(sorted(random, key=len))
 
-numbers = [1, 54, 76, 12, 111, 4343, 6, 8888, 3, 222, 1, 0, 222, -1, -122, 5, -30]
-print(sorted(numbers, key=str))
+# numbers = [1, 54, 76, 12, 111, 4343, 6, 8888, 3, 222, 1, 0, 222, -1, -122, 5, -30]
+# print(sorted(numbers, key=str))
 
-stuff = [True, False, 0, -1, "0", "1", "10", 5 < 30, "20", "2", "5", "9001", "5.5", "6.0", 6]
-print(sorted(stuff, key=float))
+# stuff = [True, False, 0, -1, "0", "1", "10", 5 < 30, "20", "2", "5", "9001", "5.5", "6.0", 6]
+# print(sorted(stuff, key=float))
+
+
+# class solution:
+#     def twoSum(self, num: list[int], target: int):
+#         nums_map = {}
+#         num = 2, 7, 11, 15
+#         target = 9
+#         for i in range(len(num)):
+#             complement = target - num[i]
+#             if complement in nums_map:
+#                 return [nums_map[complement], i]
+#             nums_map[num[i]] = i
+
+#         return[]
+   
+# if __name__ == "__main__":
+#     solution = solution()
+#     nums = [2, 7, 11, 15]
+#     target = 9
+#     result = solution.twoSum(nums, target)
+#     print(result)  # Should print [0,1]
+
+
+# class solution:
+#     def twoSum(self, nums: list[int], target: int):
+#         seen = set()
+
+#         for num in nums:
+#             complement = target - num
+#             if complement in seen:
+#                 return [complement, num]
+#             seen.add(num)
+#         return[]
+    
+# if __name__ == "__main__":
+#     solution = solution()
+#     nums = [3, 5, -4, 8, 11, 1, -1, 6]
+#     target = 10
+#     result = solution.twoSum(nums, target)
+#     print(result)
+
+
+
+
+# from typing import List, Tuple
+
+# class Solution:
+#     def allTwoSumPairs(self, nums: List[int], target: int) -> List[Tuple[int, int]]:
+#         seen = set()
+#         pairs = []
+
+#         for num in nums:
+#             complement = target - num
+#             if complement in seen:
+#                 pairs.append((complement, num))
+#             seen.add(num)
+
+#         return pairs
+    
+# if __name__ == "__main__":
+#     solution = Solution()
+#     nums = [1, 2, 3, 4, 5, 6]
+#     target = 7
+#     result = solution.allTwoSumPairs(nums, target)
+#     print(result)
+  
+
+
+# from typing import List
+
+# class Solution:
+#     def twoSumNoHash(self, nums: List[int], target: int) -> List[int]:
+#         nums.sort()
+#         lo, hi = 0, len(nums) -1
+
+#         while lo < hi:
+#             curr_sum = nums[lo] + nums [hi]
+#             if curr_sum == target:
+#                 return [nums[lo], nums[hi]]
+#             elif curr_sum < target:
+#                 lo += 1
+#             else:
+#                 hi -= 1
+#         return []
+    
+# if __name__ == "__main__":
+#     solution = Solution()
+#     nums = [2, 7, 11, 15]
+#     target = 9
+#     result = solution.twoSumNoHash(nums, target)
+#     print(result)
+   
+# from typing import List          
+            
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int):
+#         complements = {}
+#         for i in range(len(nums)):
+#             complement = target - nums[i]
+#             if complement in complements:
+#               return [complements[complement], i]
+#             complements[nums[i]] = i
+#         return []
+        
+# if __name__ == "__main__":
+#     solution = Solution()
+#     nums = [2, 7, 11, 15]
+#     target = 9
+#     result = solution.twoSum(nums, target)
+#     print(result)  # Should print [0,1]           
+# from typing import List
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int):
+#         seen = set()
+#         for num in nums:
+#             complement = target - num
+#             if complement in seen:
+#                 return [complement, num]
+#             seen.add(num)
+#         return []
+    
+# if __name__ == "__main__":
+#     solution = Solution()
+#     nums = [2, 8, 12, 15]
+#     target = 20
+#     result = solution.twoSum(nums, target)
+#     print(result)
+
+# from typing import List
+# class Solution:
+#     def twoSum_pair(self, nums: List[int], target: int) -> List[tuple[int,int]]:
+#         seen = set ()
+#         pairs = []
+
+#         for num in nums:
+#             complement = target - num
+#             if complement in seen:
+#                 pairs.append((complement, num))
+#             seen.add(num)
+#         return pairs
+    
+   
+# if __name__ == "__main__":
+#     solution = Solution()
+#     nums = [1, 2, 3, 4, 5, 6]
+#     target = 7
+#     result = solution.twoSum_pair(nums, target)
+#     print(result)
+
+from typing import List
+class Solution:
+    def twoSumhash(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        lo, hi = 0, len(nums) - 1
+
+        while lo < hi:
+            curr_sum = nums[lo] + nums[hi]
+            if curr_sum == target:
+                return [nums[lo], nums[hi]]
+            elif curr_sum < target:
+                lo += 1
+            else:
+                hi -= 1
+
+        return []
+
+if __name__ == "__main__":
+    solution = Solution()
+    nums = [10, 2, 3, 7, 5]
+    target = 12
+    result = solution.twoSumhash(nums, target)
+    print(result)
+
+
